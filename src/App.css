@@ -1,0 +1,92 @@
+
+/* ----------------------------------------- */
+/* basic set up */
+/* ----------------------------------------- */
+@media screen and (min-width: 415px){
+    .container {
+        flex-direction: row;
+    }
+}
+
+.container > * {
+    flex: 1;
+}
+
+html {
+  background-color: grey;
+  color: #555;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./assets/imgs/stock2.jpg");
+    overflow: scroll;
+
+}
+
+
+/* ----------------------------------------- */
+/* reuseable components  */
+/* ----------------------------------------- */
+.App {
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+}
+
+
+/* ----------------------------------------- */
+/* header tags  */
+/* ----------------------------------------- */
+h1, h2, h3{
+
+  text-transform: uppercase;
+  word-spacing: 4px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  color: #98A1A8;
+  font-size: 240%;
+  font-weight: 300;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+/*h2 {*/
+  /*font-size: 180%;*/
+  /*word-spacing: 2px;*/
+  /*text-align: center;*/
+  /*margin-bottom: 30px;*/
+  /*letter-spacing: 1px;*/
+
+/*}*/
+
+/*h2:after {*/
+  /*display: block;*/
+  /*height: 2px;*/
+  /*background-color: #299E00;*/
+  /*content: " ";*/
+  /*width: 100%;*/
+  /*margin: 0 auto;*/
+  /*margin-top: 30px;*/
+/*}*/
+
+/*h3{*/
+  /*font-size: 110%;*/
+  /*margin-bottom: 15px;*/
+  /*text-align: center;*/
+/*}*/
+/* ----------------------------------------- */
+/* icons  */
+/* ----------------------------------------- */
+
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #299E00;
+  margin-bottom: 10px;
+  text-align: center;
+}
