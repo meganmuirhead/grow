@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import StockCard from "./StockCard";
-import {
-    BrowserRouter as Router,
 
-} from "react-router-dom"
 
 
 class MainHeader extends Component {
@@ -12,12 +9,8 @@ class MainHeader extends Component {
         this.state = {
             search: null,
             setSearch: null,
-            // search: ''
         }
     }
-
-
-
 
 
     fetchStocks = (e) => {
@@ -40,8 +33,6 @@ class MainHeader extends Component {
             }
         )
         return (
-            <Router>
-
             <React.Fragment>
                 <nav className='header'>
                     <div className="content">
@@ -71,7 +62,6 @@ class MainHeader extends Component {
                 </div>
 
             </React.Fragment>
-            </Router>
         )
 
     }
