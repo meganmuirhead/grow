@@ -16,25 +16,32 @@ class MainHeader extends Component {
         }
     }
 
-    query = fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
-        .then(res => res.json())
-        .then(
-            (result) => {
-                this.setState({
-                    isLoaded: true,
-                    items: result.items
-                });
-            },
-            // Note: it's important to handle errors here
-            // instead of a catch() block so that we don't swallow
-            // exceptions from actual bugs in components.
-            (error) => {
-                this.setState({
-                    isLoaded: true,
-                    error
-                });
-            }
-        )
+    async componentDidMount() {
+        // const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`
+
+        const response = await fetch("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=demo")
+        // const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
+        const data =  await response.json()
+        console.log(data)
+            // .then(res => res.json())
+            // .then(
+            //     (result) => {
+            //         this.setState({
+            //             isLoaded: true,
+            //             items: result.items
+            //         });
+            //     },
+            //     // Note: it's important to handle errors here
+            //     // instead of a catch() block so that we don't swallow
+            //     // exceptions from actual bugs in components.
+            //     (error) => {
+            //         this.setState({
+            //             isLoaded: true,
+            //             error
+            //         });
+            //     }
+            // )
+    }
 
     updateSearch = (e) => {
         e.preventDefault();
