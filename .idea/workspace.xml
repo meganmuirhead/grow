@@ -32,8 +32,8 @@
       <file leaf-file-name="MainHeader.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MainHeader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            <state relative-caret-position="-288">
+              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -237,12 +237,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584414525016</updated>
-      <workItem from="1584414526230" duration="35188000" />
+      <workItem from="1584414526230" duration="37035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35188000" />
+    <option name="totallyTimeSpent" value="37035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1425" height="817" extended-state="0" />
@@ -298,14 +298,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/MainHeader.js</url>
-          <line>35</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="2" />
     </breakpoint-manager>
   </component>
@@ -409,8 +401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainHeader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="-288">
+          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
