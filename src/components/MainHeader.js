@@ -10,7 +10,7 @@ class MainHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: 'megan',
+            loading: true,
             search: ''
             // search: ''
         }
@@ -19,10 +19,14 @@ class MainHeader extends Component {
     async componentDidMount() {
         // const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`
 
-        const response = await fetch("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=demo")
-        // const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
-        const data =  await response.json()
+        const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
+        // const response = await fetch("https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=BA&apikey=demo");
+        const data =  await response.json();
+        const dataArr = data.bestMatches;
+
         console.log(data)
+        // this.setState({search: data.bestMatches})
+        // console.log(data.bestMatches)
             // .then(res => res.json())
             // .then(
             //     (result) => {
@@ -41,13 +45,13 @@ class MainHeader extends Component {
             //         });
             //     }
             // )
-    }
+    };
 
     updateSearch = (e) => {
         e.preventDefault();
         this.setState({search: e.target.value.substr(0, 20)})
         console.log(this.state.search)
-    }
+    };
 
 
     render() {
@@ -76,7 +80,7 @@ class MainHeader extends Component {
                     <h1>Stock Watcher</h1>
                     <input type="text" value={this.state.search} placeholder="Enter Stock Symbol" onChange={this.updateSearch.bind(this)}/>
                     <Link className="btn btn-full" href="#" >Add Stock</Link>
-                    <a className="btn btn-ghost" href="#">Show Me More</a>
+                    <a className="btn btn-ghost" href="#">Delete</a>
                 </div>
                 <div className='container'>
                     {/*do map off props.stock not hard coded filter*/}
