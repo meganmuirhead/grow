@@ -60,8 +60,8 @@ class MainHeader extends Component {
                 <div className='container'>
 
 
-                    {this.state.stocks.map(stock => {
-                        return <StockCard stock={stock}/>
+                    {this.state.stocks.map((stock, index)=> {
+                        return <StockCard stock={stock} key={index}/>
                     })}
                 </div>
 
