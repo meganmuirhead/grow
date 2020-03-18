@@ -16,14 +16,15 @@ class MainHeader extends Component {
     storeInput = (e) => {
         e.preventDefault();
         this.setState({search: e.target.value.substr(0, 20)})
-        if (!this.state.search) {
-            return;
-        }
+
         console.log(2, this.state.search)
 
     }
     fetchStocks = (e) => {
         e.preventDefault();
+        if (!this.state.search) {
+            return;
+        }
         fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
             .then(res => res.json())
             .then(data => {
