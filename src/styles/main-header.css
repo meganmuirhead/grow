@@ -11,8 +11,8 @@
 /* buttons  */
 /* ----------------------------------------- */
 
-.btn:link,
-.btn:visited {
+.btn,
+.btn {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -23,17 +23,19 @@
 
 }
 
-.btn-full:link,
-.btn-full:visited {
+.btn-full,
+.btn-full {
     background-color: #284CC9;
     border: 1px solid #284CC9;
     margin-right: 15px;
 }
 
-.btn-ghost:link,
-.btn-ghost:visited {
+.btn-ghost,
+.btn-ghost {
     border: 1px solid #6AF531;
     color: #6AF531;
+    background-color: #284CC9;
+
 
 }
 
@@ -126,7 +128,7 @@
 }
 
 input {
-    height:50px;
+    height:35px;
     font-size:14pt;
     margin-right: 20px;
     padding: 0 10px;

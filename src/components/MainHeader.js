@@ -16,23 +16,19 @@ class MainHeader extends Component {
         }
     }
 
-    async componentDidMount() {
-        // const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`
 
-        const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
-        // const response = await fetch("https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=BA&apikey=demo");
-        const data =  await response.json();
-        const dataArr = data.bestMatches;
 
-        console.log(data)
-        // this.setState({search: data.bestMatches})
-        // console.log(data.bestMatches)
+    updateSearch = (e) => {
+        e.preventDefault();
+        this.setState({search: e.target.value.substr(0, 20)})
+        console.log(this.state.search)
+        const response = fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
+        console.log(response)
             // .then(res => res.json())
             // .then(
-            //     (result) => {
+            //     (response) => {
             //         this.setState({
-            //             isLoaded: true,
-            //             items: result.items
+            //             search: e.target.value.substr(0,20)
             //         });
             //     },
             //     // Note: it's important to handle errors here
@@ -45,12 +41,6 @@ class MainHeader extends Component {
             //         });
             //     }
             // )
-    };
-
-    updateSearch = (e) => {
-        e.preventDefault();
-        this.setState({search: e.target.value.substr(0, 20)})
-        console.log(this.state.search)
     };
 
 
@@ -79,8 +69,8 @@ class MainHeader extends Component {
                 <div className="stock-text-box">
                     <h1>Stock Watcher</h1>
                     <input type="text" value={this.state.search} placeholder="Enter Stock Symbol" onChange={this.updateSearch.bind(this)}/>
-                    <Link className="btn btn-full" href="#" >Add Stock</Link>
-                    <a className="btn btn-ghost" href="#">Delete</a>
+                    <button className="btn btn-full" href="#" >Add Stock</button>
+                    <button className="btn btn-ghost" href="#">Delete</button>
                 </div>
                 <div className='container'>
                     {/*do map off props.stock not hard coded filter*/}
