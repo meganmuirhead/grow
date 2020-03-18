@@ -8,10 +8,10 @@ class MainHeader extends Component {
         super(props);
         this.state = {
             search: null,
+            stocks: []
         }
     }
 
-    stocks = [];
 
     storeInput = (e) => {
         e.preventDefault();
@@ -31,7 +31,7 @@ class MainHeader extends Component {
                 this.setState({setSearch: data});
                 console.log(2, data)
 
-                this.stocks.push(data);
+                this.state.stocks.push(data);
 
 
             })
@@ -60,7 +60,7 @@ class MainHeader extends Component {
                 <div className='container'>
 
 
-                    {this.stocks.map(stock => {
+                    {this.state.stocks.map(stock => {
                         return <StockCard stock={stock}/>
                     })}
                 </div>
