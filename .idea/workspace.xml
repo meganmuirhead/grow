@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="462a236f-28c4-4104-9f40-ffb203daca35" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainHeader.js" afterDir="false" />
-    </list>
+    <list default="true" id="462a236f-28c4-4104-9f40-ffb203daca35" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,8 +30,8 @@
       <file leaf-file-name="MainHeader.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MainHeader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+            <state relative-caret-position="3">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -237,12 +233,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584414525016</updated>
-      <workItem from="1584414526230" duration="23646000" />
+      <workItem from="1584414526230" duration="23904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23646000" />
+    <option name="totallyTimeSpent" value="23904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1425" height="817" extended-state="0" />
@@ -253,7 +249,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32916668" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="npm" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.075" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.45277777" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -301,7 +297,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MainHeader.js</url>
-          <line>20</line>
+          <line>40</line>
           <properties lambdaOrdinal="-1" />
         </line-breakpoint>
       </breakpoints>
@@ -408,8 +404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainHeader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+        <state relative-caret-position="3">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="37" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
