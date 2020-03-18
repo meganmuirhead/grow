@@ -32,8 +32,11 @@
       <file leaf-file-name="MainHeader.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MainHeader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="122">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -234,15 +237,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584414525016</updated>
-      <workItem from="1584414526230" duration="33390000" />
+      <workItem from="1584414526230" duration="33556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33390000" />
+    <option name="totallyTimeSpent" value="33556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1425" height="817" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -297,7 +301,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MainHeader.js</url>
-          <line>37</line>
+          <line>34</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -405,8 +409,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainHeader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="122">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

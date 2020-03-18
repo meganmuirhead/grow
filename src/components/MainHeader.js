@@ -12,6 +12,7 @@ class MainHeader extends Component {
         }
     }
 
+  
 
     fetchStocks = (e) => {
             this.setState({search: e.target.value.substr(0, 20)})
