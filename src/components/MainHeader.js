@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StockCard from "./StockCard";
 import {
     BrowserRouter as Router,
-    Link
+
 } from "react-router-dom"
 
 
@@ -10,39 +10,26 @@ class MainHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: true,
-            search: ''
+            search: null,
+            setSearch: null,
             // search: ''
         }
     }
 
 
 
-    updateSearch = (e) => {
-        e.preventDefault();
-        this.setState({search: e.target.value.substr(0, 20)})
-        console.log(this.state.search)
-        const response = fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
-        console.log(response)
-            // .then(res => res.json())
-            // .then(
-            //     (response) => {
-            //         this.setState({
-            //             search: e.target.value.substr(0,20)
-            //         });
-            //     },
-            //     // Note: it's important to handle errors here
-            //     // instead of a catch() block so that we don't swallow
-            //     // exceptions from actual bugs in components.
-            //     (error) => {
-            //         this.setState({
-            //             isLoaded: true,
-            //             error
-            //         });
-            //     }
-            // )
-    };
 
+
+    fetchStocks = (e) => {
+            this.setState({search: e.target.value.substr(0, 20)})
+
+        fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
+            .then(res => res.json())
+            .then(data => {
+                this.setState({setSearch: data});
+                console.log(this.state.setSearch)
+            })
+    }
 
     render() {
         //get rid of filtered stock
@@ -68,7 +55,8 @@ class MainHeader extends Component {
                 </nav>
                 <div className="stock-text-box">
                     <h1>Stock Watcher</h1>
-                    <input type="text" value={this.state.search} placeholder="Enter Stock Symbol" onChange={this.updateSearch.bind(this)}/>
+                    <input type="text"  placeholder="Enter Stock Symbol" onChange={this.fetchStocks}/>
+                    {/*<input type="text" value={this.state.search} placeholder="Enter Stock Symbol" onChange={this.updateSearch.bind(this)}/>*/}
                     <button className="btn btn-full" href="#" >Add Stock</button>
                     <button className="btn btn-ghost" href="#">Delete</button>
                 </div>
