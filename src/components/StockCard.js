@@ -2,17 +2,18 @@ import React from 'react';
 import '../styles/card.css';
 
 const StockCard = (props) => {
+    console.log('stock', props.stock)
 
     return(
         <div className="stock-card-parent">
             <div className="percent">
-                bleh
+                <div> {props.stock.symbol}</div>
+
             </div>
 
             <div className="stock-card">
 
-                <div> {props.stock.name}</div>
-                <div> {props.stock.stockName}</div>
+                <div> {props.stock.symbol}</div>
              </div>
         </div>
     )

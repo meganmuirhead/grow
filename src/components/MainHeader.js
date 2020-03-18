@@ -30,11 +30,11 @@ class MainHeader extends Component {
             .then(data => {
                 this.setState({setSearch: data});
                 console.log(2, data)
-
                 this.state.stocks.push(data);
-
-
             })
+            .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     render() {
