@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/card.css';
 
 const StockCard = (props) => {
-    console.log('stock', props.stock)
 
     return(
         <div className="stock-card-parent"  onClick={props.onClickDelete}>

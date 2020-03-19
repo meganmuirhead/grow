@@ -21,7 +21,6 @@ class MainHeader extends Component {
     }
 
     onClickDelete = (index) => {
-        console.log('click d')
         let box = this.state.search.split('');
         box.splice(index, 1)
         let newText = box.join('');
@@ -37,7 +36,6 @@ class MainHeader extends Component {
             .then(res => res.json())
             .then(data => {
                 this.setState({setSearch: data, stocks: [...this.state.stocks, data['Global Quote']]});
-                // console.log('data: ', JSON.stringify(data['Global Quote']));
 
                 this.state.stocks.push(data);
 

@@ -1,8 +1,6 @@
 .stock-card-parent{
     display: inline-flex;
     padding: 20px;
-    /*flex-wrap: nowrap;*/
-    /*justify-content: space-evenly;*/
 }
 .stock-card {
     flex: 1 1 150px;
@@ -27,7 +25,3 @@
 .padding {
     padding: 3px;
 }
-/*.container {*/
-    /*display: flex;*/
-    /*justify-content: space-evenly;*/
-/*}*/
