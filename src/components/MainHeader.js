@@ -28,13 +28,14 @@ class MainHeader extends Component {
         fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.search}&apikey=HY0JP87WH3PG17X6`)
             .then(res => res.json())
             .then(data => {
-                this.setState({setSearch: data});
-                console.log(2, data)
+                this.setState({setSearch: data, stocks: [...this.state.stocks, data['Global Quote']]});
+                console.log('data: ', JSON.stringify(data['Global Quote']));
+                // this.state.stocks = [...this.state.stocks, data];                console.log(2, data)
+
                 this.state.stocks.push(data);
+
+
             })
-            .catch((error) => {
-            console.error('Error:', error);
-        });
     }
 
     render() {
@@ -61,6 +62,7 @@ class MainHeader extends Component {
 
 
                     {this.state.stocks.map((stock, index)=> {
+                        if (!stock) {return;}
                         return <StockCard stock={stock} key={index}/>
                     })}
                 </div>

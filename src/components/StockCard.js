@@ -7,14 +7,14 @@ const StockCard = (props) => {
     return(
         <div className="stock-card-parent">
             <div className="percent">
-                <div> {props.stock.symbol}</div>
+                <div> {props.stock['01. symbol']}</div>
 
             </div>
 
             <div className="stock-card">
 
-                <div> {props.stock.symbol}</div>
-             </div>
+                <div> {props.stock['02. open']}</div>
+            </div>
         </div>
     )
 }
