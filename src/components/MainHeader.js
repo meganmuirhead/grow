@@ -7,7 +7,7 @@ class MainHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            search: null,
+            search: '',
             stocks: []
         }
     }
@@ -17,9 +17,17 @@ class MainHeader extends Component {
         e.preventDefault();
         this.setState({search: e.target.value.substr(0, 20)})
 
-        console.log(2, this.state.search)
 
     }
+
+    onClickDelete = (index) => {
+        console.log('click d')
+        let box = this.state.search.split('');
+        box.splice(index, 1)
+        let newText = box.join('');
+        this.setState({search: newText})
+    }
+
     fetchStocks = (e) => {
         e.preventDefault();
         if (!this.state.search) {
@@ -29,8 +37,7 @@ class MainHeader extends Component {
             .then(res => res.json())
             .then(data => {
                 this.setState({setSearch: data, stocks: [...this.state.stocks, data['Global Quote']]});
-                console.log('data: ', JSON.stringify(data['Global Quote']));
-                // this.state.stocks = [...this.state.stocks, data];                console.log(2, data)
+                // console.log('data: ', JSON.stringify(data['Global Quote']));
 
                 this.state.stocks.push(data);
 
@@ -42,28 +49,21 @@ class MainHeader extends Component {
 
         return (
             <React.Fragment>
-                <nav className='header'>
-                    <div className="content">
-                        <ul className="main-nav">
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">How it Works</a></li>
-                            <li><a href="#">Free Stock</a></li>
-                            <li><a href="#">Sign Up</a></li>
-                        </ul>
-                    </div>
-                </nav>
                 <div className="stock-text-box">
-                    <h1>Stock Watcher</h1>
+                    <h1>Stock Watcher Dashboard</h1>
                     <input type="text"  placeholder="Enter Stock Symbol" onChange={this.storeInput.bind(this)}/>
                     <button className="btn btn-full" onClick={this.fetchStocks.bind(this)}>Add Stock</button>
-                    <button className="btn btn-ghost" >Delete</button>
+                    {/*<button className="btn btn-ghost" onClickDelete={() => this.onClickDelete(index)}>Delete</button>*/}
                 </div>
                 <div className='container'>
 
 
                     {this.state.stocks.map((stock, index)=> {
                         if (!stock) {return;}
-                        return <StockCard stock={stock} key={index}/>
+                        return <StockCard stock={stock}
+                                          key={index}
+                                          onClickDelete={() => this.onClickDelete(index)}/>
+
                     })}
                 </div>
 

@@ -6,15 +6,23 @@
 }
 .stock-card {
     flex: 1 1 150px;
-    width: 100px;
+    width: 150px;
     border: 1px solid #299E00;
-    padding: 20px
+    background-color: white;
+    padding: 20px;
+    font-size: 50%;
 }
 .percent {
-    width: 50px;
-    border: 1px solid red;
+    width: 80px;
+    border: 1px solid #284CC9;
+    background-color: #299E00;
     padding: 5px;
 
+}
+
+.card-flex {
+    display: flex;
+    padding: 5px;
 }
 /*.container {*/
     /*display: flex;*/
